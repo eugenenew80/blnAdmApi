@@ -42,10 +42,14 @@ public class RoleServiceImpl extends AbstractEntityService<Role> implements Role
 
 	@Override
 	public RoleModule addModule(Long roleId, RoleModule roleModule) {
+		RoleModuleId roleModuleId = new RoleModuleId(roleId, roleModule.getModule().getId());
+
+		roleModule.setId(roleModuleId);
 		Role role = findById(roleId);
 		role.getModules().add(roleModule);
-		role = update(role); 		
-		return findModuleById(new RoleModuleId(roleId, roleModule.getModule().getId()));
+		update(role);
+
+		return findModuleById(roleModuleId);
 	}
 	
 	
@@ -57,7 +61,7 @@ public class RoleServiceImpl extends AbstractEntityService<Role> implements Role
 		currentRoleModule.setStartDate(roleModule.getStartDate());
 		currentRoleModule.setEndDate(roleModule.getEndDate());
 		
-		role = update(role); 		
+		update(role);
 		return findModuleById(new RoleModuleId(roleId, roleModule.getModule().getId()));
 	}
 
@@ -89,10 +93,14 @@ public class RoleServiceImpl extends AbstractEntityService<Role> implements Role
 	
 	@Override
 	public RoleFunc addFunc(Long roleId, RoleFunc roleFunc) {
+		RoleFuncId roleFuncId = new RoleFuncId(roleId, roleFunc.getFunc().getId());
+
+		roleFunc.setId(roleFuncId);
 		Role role = findById(roleId);
 		role.getFuncs().add(roleFunc);
-		role = update(role); 		
-		return findFuncById(new RoleFuncId(roleId, roleFunc.getFunc().getId()));
+		update(role);
+
+		return findFuncById(roleFuncId);
 	}
 
 	
@@ -104,7 +112,7 @@ public class RoleServiceImpl extends AbstractEntityService<Role> implements Role
 		currentRoleFunc.setStartDate(roleFunc.getStartDate());
 		currentRoleFunc.setEndDate(roleFunc.getEndDate());
 		
-		role = update(role); 		
+		update(role);
 		return findFuncById(new RoleFuncId(roleId, roleFunc.getFunc().getId()));
 	}
 
@@ -136,10 +144,14 @@ public class RoleServiceImpl extends AbstractEntityService<Role> implements Role
 
 	@Override
 	public RoleDict addDict(Long roleId, RoleDict roleDict) {
+		RoleDictId roleDictId = new RoleDictId(roleId, roleDict.getDict().getId());
+
+		roleDict.setId(roleDictId);
 		Role role = findById(roleId);
 		role.getDicts().add(roleDict);
-		role = update(role); 		
-		return findDictById(new RoleDictId(roleId, roleDict.getDict().getId()));
+		update(role);
+
+		return findDictById(roleDictId);
 	}
 	
 	
@@ -151,7 +163,7 @@ public class RoleServiceImpl extends AbstractEntityService<Role> implements Role
 		currentRoleDict.setStartDate(roleDict.getStartDate());
 		currentRoleDict.setEndDate(roleDict.getEndDate());
 		
-		role = update(role); 		
+		update(role);
 		return findDictById(new RoleDictId(roleId, roleDict.getDict().getId()));
 	}
 

@@ -38,10 +38,14 @@ public class UserServiceImpl extends AbstractEntityService<User> implements User
 
 	@Override
 	public UserRole addRole(Long userId, UserRole userRole) {
+		UserRoleId userRoleId = new UserRoleId(userId, userRole.getRole().getId());
+
+		userRole.setId(userRoleId);
 		User user = findById(userId);
 		user.getRoles().add(userRole);
-		user = update(user); 		
-		return findRoleById(new UserRoleId(userId, userRole.getRole().getId()));
+		update(user);
+
+		return findRoleById(userRoleId);
 	}
 
 
@@ -49,7 +53,8 @@ public class UserServiceImpl extends AbstractEntityService<User> implements User
 	public UserRole updateRole(Long userId, UserRole userRole) {
 		User user = findById(userId);
 		user.getRoles().add(userRole);
-		user = update(user); 		
+		update(user);
+
 		return findRoleById(new UserRoleId(userId, userRole.getRole().getId()));
 	}
 
