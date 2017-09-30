@@ -7,7 +7,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
     
 
-    <changeSet id="adm-eug-13" logicalFilePath="path-independent" author="eugene" context="postgres">
+    <changeSet id="adm-eug-9" logicalFilePath="path-independent" author="eugene" context="postgres">
         <comment>Creating table: adm_users</comment>
         <createTable tableName="adm_users" schemaName="apps">            
             <column name="id" type="number">
@@ -24,7 +24,7 @@
         </createTable>
     </changeSet>
 
-	<changeSet id="adm-eug-14" logicalFilePath="path-independent" author="eugene" context="postgres">
+	<changeSet id="adm-eug-10" logicalFilePath="path-independent" author="eugene" context="postgres">
 	    <comment>Creating primary key for table: adm_users</comment>
 	    <addPrimaryKey 
 	            columnNames="id"
@@ -33,7 +33,7 @@
 	            tableName="adm_users"/>
 	</changeSet>
 	
-	<changeSet id="adm-eug-15" logicalFilePath="path-independent" author="eugene" context="postgres">
+	<changeSet id="adm-eug-11" logicalFilePath="path-independent" author="eugene" context="postgres">
 		<comment>Load demo data to table: adm_users</comment>
 	    <loadData
 	            encoding="UTF-8"
@@ -54,7 +54,7 @@
         </rollback>	
 	</changeSet>	
 	
-	<changeSet id="adm-eug-16" logicalFilePath="path-independent" author="eugene" context="postgres">
+	<changeSet id="adm-eug-12" logicalFilePath="path-independent" author="eugene" context="postgres">
 	    <comment>Creating sequence for table: adm_users</comment>
 	    <createSequence 
 	            incrementBy="1"

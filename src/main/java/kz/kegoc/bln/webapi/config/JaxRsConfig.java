@@ -6,7 +6,6 @@ import javax.ws.rs.core.*;
 import kz.kegoc.bln.webapi.adm.*;
 import kz.kegoc.bln.webapi.exception.mapper.*;
 import kz.kegoc.bln.webapi.filters.BasicAuthentificationFilter;
-import kz.kegoc.bln.webapi.meta.*;
 
 
 @ApplicationPath("/webapi")
@@ -19,13 +18,8 @@ public class JaxRsConfig extends Application {
 		resources.add(FuncResourceImpl.class);
 		resources.add(RoleResourceImpl.class);
 		resources.add(UserResourceImpl.class);
-		
-		resources.add(MetaModuleResourceImpl.class);
-		resources.add(MetaDictResourceImpl.class);
-		resources.add(MetaAdmResourceImpl.class);
-		
+
 		resources.add(BasicAuthentificationFilter.class);
-		
 		resources.add(RepositryNotFoundExceptionMapperImpl.class);
 		resources.add(EntityNotFoundExceptionMapperImpl.class);
 		resources.add(DuplicateEntityExceptionMapperImpl.class);
