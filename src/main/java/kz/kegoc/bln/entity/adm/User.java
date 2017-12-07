@@ -15,6 +15,9 @@ public class User implements HasId, HasCode, HasName {
 	
 	@NotNull @Size(max = 100)
 	private String name;
-	
+
+	@NotNull
+	private Long orgId;
+
 	private List<UserRole> roles; 
 }
