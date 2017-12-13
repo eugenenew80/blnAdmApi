@@ -50,7 +50,6 @@
 	        
 	        <column name="role_id"		type="NUMERIC"/>
 	        <column name="dict_id"		type="NUMERIC"/>
-	        <column name="start_date"	type="DATE"/>
 	    </loadData>
 		
 		<rollback>

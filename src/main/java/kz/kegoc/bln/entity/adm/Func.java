@@ -9,7 +9,7 @@ import lombok.*;
 public class Func implements HasId, HasCode, HasName {
 	private Long id;
 	
-	@NotNull @Size(max = 15)
+	@NotNull @Size(max = 30)
 	private String code;
 	
 	@NotNull @Size(max = 100)
