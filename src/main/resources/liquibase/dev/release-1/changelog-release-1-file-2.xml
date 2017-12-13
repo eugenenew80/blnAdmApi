@@ -21,6 +21,10 @@
             <column name="name" type="varchar(100)">
                 <constraints nullable="false"/>
             </column>
+
+            <column name="url" type="varchar(300)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 
@@ -47,6 +51,7 @@
 	        <column name="id" 				type="NUMERIC"/>
 	        <column name="code" 			type="STRING"/>
 	        <column name="name"				type="STRING"/>
+	        <column name="url"				type="STRING"/>
 	    </loadData>
 		
 		<rollback>
