@@ -1,7 +1,105 @@
 ﻿id;code;name;url
-1;DICT_UNITS_SELECT;Просмотр справочника единиц измерения;/dict/dictPowerLineType
-2;DICT_UNITS_INSERT;Добавление записей в справочник единиц измерения;/dict/dictPowerLineType
-3;DICT_UNITS_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictPowerLineType
-4;DICT_UNITS_DELETE;Удаление записей из справочника единиц измерения;/dict/dictPowerLineType
-
-
+1;DICT_POWER_LINE_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictPowerLineType
+2;DICT_POWER_LINE_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictPowerLineType
+3;DICT_POWER_LINE_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictPowerLineType
+4;DICT_POWER_LINE_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictPowerLineType
+5;DICT_POWER_LINE_READ;Просмотр справочника единиц измерения;/dict/dictPowerLine
+6;DICT_POWER_LINE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictPowerLine
+7;DICT_POWER_LINE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictPowerLine
+8;DICT_POWER_LINE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictPowerLine
+9;DICT_POWER_TRANSFORMER_READ;Просмотр справочника единиц измерения;/dict/dictPowerTransformer
+10;DICT_POWER_TRANSFORMER_CREATE;Добавление записей в справочник единиц измерения;/dict/dictPowerTransformer
+11;DICT_POWER_TRANSFORMER_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictPowerTransformer
+12;DICT_POWER_TRANSFORMER_DELETE;Удаление записей из справочника единиц измерения;/dict/dictPowerTransformer
+13;DICT_REACTOR_READ;Просмотр справочника единиц измерения;/dict/dictReactor
+14;DICT_REACTOR_CREATE;Добавление записей в справочник единиц измерения;/dict/dictReactor
+15;DICT_REACTOR_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictReactor
+16;DICT_REACTOR_DELETE;Удаление записей из справочника единиц измерения;/dict/dictReactor
+17;DICT_METER_READ;Просмотр справочника единиц измерения;/dict/dictMeter
+18;DICT_METER_CREATE;Добавление записей в справочник единиц измерения;/dict/dictMeter
+19;DICT_METER_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictMeter
+20;DICT_METER_DELETE;Удаление записей из справочника единиц измерения;/dict/dictMeter
+21;DICT_SUBSTATION_READ;Просмотр справочника единиц измерения;/dict/dictSubstation
+22;DICT_SUBSTATION_CREATE;Добавление записей в справочник единиц измерения;/dict/dictSubstation
+23;DICT_SUBSTATION_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictSubstation
+24;DICT_SUBSTATION_DELETE;Удаление записей из справочника единиц измерения;/dict/dictSubstation
+25;DICT_ENERGY_SOURCE_READ;Просмотр справочника единиц измерения;/dict/dictEnergySource
+26;DICT_ENERGY_SOURCE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictEnergySource
+27;DICT_ENERGY_SOURCE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictEnergySource
+28;DICT_ENERGY_SOURCE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictEnergySource
+29;DICT_METERING_POINT_READ;Просмотр справочника единиц измерения;/dict/dictMeteringPoint
+30;DICT_METERING_POINT_CREATE;Добавление записей в справочник единиц измерения;/dict/dictMeteringPoint
+31;DICT_METERING_POINT_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictMeteringPoint
+32;DICT_METERING_POINT_DELETE;Удаление записей из справочника единиц измерения;/dict/dictMeteringPoint
+33;DICT_METER_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictMeterType
+34;DICT_METER_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictMeterType
+35;DICT_METER_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictMeterType
+36;DICT_METER_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictMeterType
+37;DICT_CURRENT_TRANS_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictCurrentTransType
+38;DICT_CURRENT_TRANS_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictCurrentTransType
+39;DICT_CURRENT_TRANS_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictCurrentTransType
+40;DICT_CURRENT_TRANS_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictCurrentTransType
+41;DICT_VOLTAGE_TRANS_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictVoltageTransType
+42;DICT_VOLTAGE_TRANS_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictVoltageTransType
+43;DICT_VOLTAGE_TRANS_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictVoltageTransType
+44;DICT_VOLTAGE_TRANS_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictVoltageTransType
+45;DICT_SUBSTATION_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictSubstationType
+46;DICT_SUBSTATION_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictSubstationType
+47;DICT_SUBSTATION_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictSubstationType
+48;DICT_SUBSTATION_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictSubstationType
+49;DICT_ENERGY_SOURCE_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictEnergySourceType
+50;DICT_ENERGY_SOURCE_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictEnergySourceType
+51;DICT_ENERGY_SOURCE_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictEnergySourceType
+52;DICT_ENERGY_SOURCE_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictEnergySourceType
+53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника единиц измерения;/dict/dictVoltageClass
+54;DICT_VOLTAGE_CLASS_CREATE;Добавление записей в справочник единиц измерения;/dict/dictVoltageClass
+55;DICT_VOLTAGE_CLASS_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictVoltageClass
+56;DICT_VOLTAGE_CLASS_DELETE;Удаление записей из справочника единиц измерения;/dict/dictVoltageClass
+57;DICT_METERING_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictMeteringType
+58;DICT_METERING_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictMeteringType
+59;DICT_METERING_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictMeteringType
+60;DICT_METERING_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictMeteringType
+61;DICT_ACCOUNTING_TYPE_READ;Просмотр справочника единиц измерения;/dict/dictAccountingType
+62;DICT_ACCOUNTING_TYPE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictAccountingType
+63;DICT_ACCOUNTING_TYPE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictAccountingType
+64;DICT_ACCOUNTING_TYPE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictAccountingType
+65;DICT_UNIT_READ;Просмотр справочника единиц измерения;/dict/dictUnit
+66;DICT_UNIT_CREATE;Добавление записей в справочник единиц измерения;/dict/dictUnit
+67;DICT_UNIT_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictUnit
+68;DICT_UNIT_DELETE;Удаление записей из справочника единиц измерения;/dict/dictUnit
+69;DICT_DATA_SOURCE_READ;Просмотр справочника единиц измерения;/dict/dictDataSource
+70;DICT_DATA_SOURCE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictDataSource
+71;DICT_DATA_SOURCE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictDataSource
+72;DICT_DATA_SOURCE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictDataSource
+73;DICT_DATA_SOURCE_READ;Просмотр справочника единиц измерения;/dict/dictOrganization
+74;DICT_DATA_SOURCE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictOrganization
+75;DICT_DATA_SOURCE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictOrganization
+76;DICT_DATA_SOURCE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictOrganization
+77;DICT_COUNTRY_READ;Просмотр справочника единиц измерения;/dict/dictCountry
+78;DICT_COUNTRY_CREATE;Добавление записей в справочник единиц измерения;/dict/dictCountry
+79;DICT_COUNTRY_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictCountry
+80;DICT_COUNTRY_DELETE;Удаление записей из справочника единиц измерения;/dict/dictCountry
+81;DICT_REGION_READ;Просмотр справочника единиц измерения;/dict/dictRegion
+82;DICT_REGION_CREATE;Добавление записей в справочник единиц измерения;/dict/dictRegion
+83;DICT_REGION_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictRegion
+84;DICT_REGION_DELETE;Удаление записей из справочника единиц измерения;/dict/dictRegion
+85;DICT_ENERGY_ZONE_READ;Просмотр справочника единиц измерения;/dict/dictEnergyZone
+86;DICT_ENERGY_ZONE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictEnergyZone
+87;DICT_ENERGY_ZONE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictEnergyZone
+88;DICT_ENERGY_ZONE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictEnergyZone
+89;DICT_ENERGY_NODE_READ;Просмотр справочника единиц измерения;/dict/dictEnergyNode
+90;DICT_ENERGY_NODE_CREATE;Добавление записей в справочник единиц измерения;/dict/dictEnergyNode
+91;DICT_ENERGY_NODE_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictEnergyNode
+92;DICT_ENERGY_NODE_DELETE;Удаление записей из справочника единиц измерения;/dict/dictEnergyNode
+93;DICT_ENERGY_DISTRICT_READ;Просмотр справочника единиц измерения;/dict/dictEnergyDistrict
+94;DICT_ENERGY_DISTRICT_CREATE;Добавление записей в справочник единиц измерения;/dict/dictEnergyDistrict
+95;DICT_ENERGY_DISTRICT_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictEnergyDistrict
+96;DICT_ENERGY_DISTRICT_DELETE;Удаление записей из справочника единиц измерения;/dict/dictEnergyDistrict
+97;DICT_BUSINESS_PARTNER_READ;Просмотр справочника единиц измерения;/dict/dictBusinessPartner
+98;DICT_BUSINESS_PARTNER_CREATE;Добавление записей в справочник единиц измерения;/dict/dictBusinessPartner
+99;DICT_BUSINESS_PARTNER_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictBusinessPartner
+100;DICT_BUSINESS_PARTNER_DELETE;Удаление записей из справочника единиц измерения;/dict/dictBusinessPartner
+101;DICT_BANK_READ;Просмотр справочника единиц измерения;/dict/dictBank
+102;DICT_BANK_CREATE;Добавление записей в справочник единиц измерения;/dict/dictBank
+103;DICT_BANK_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictBank
+104;DICT_BANK_DELETE;Удаление записей из справочника единиц измерения;/dict/dictBank
