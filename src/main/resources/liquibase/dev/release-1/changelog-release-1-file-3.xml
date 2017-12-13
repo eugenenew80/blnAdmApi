@@ -64,7 +64,7 @@
 	            incrementBy="1"
 	            schemaName="apps"
 	            sequenceName="adm_users_s"
-	            startValue="3"/>
+	            startValue="33"/>
 	</changeSet>	
 	
 </databaseChangeLog>
