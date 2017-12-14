@@ -99,7 +99,14 @@
 98;DICT_BUSINESS_PARTNER_CREATE;Добавление записей в справочник бизнес-партнеров;/dict/dictBusinessPartner
 99;DICT_BUSINESS_PARTNER_UPDATE;Редактирование записей в справочнике бизнес-партнеров;/dict/dictBusinessPartner
 100;DICT_BUSINESS_PARTNER_DELETE;Удаление записей из справочника бизнес-партнеров;/dict/dictBusinessPartner
-101;DICT_BANK_READ;Просмотр справочника единиц измерения;/dict/dictBank
-102;DICT_BANK_CREATE;Добавление записей в справочник единиц измерения;/dict/dictBank
-103;DICT_BANK_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictBank
-104;DICT_BANK_DELETE;Удаление записей из справочника единиц измерения;/dict/dictBank
+101;DICT_BANK_READ;Просмотр справочника банка;/dict/dictBank
+102;DICT_BANK_CREATE;Добавление записей в справочика банков;/dict/dictBank
+103;DICT_BANK_UPDATE;Редактирование записей в справочнике банков;/dict/dictBank
+104;DICT_BANK_DELETE;Удаление записей из справочника банков;/dict/dictBank
+105;ECM_CONTENT_TYPE_READ;Просмотр справочника банка;/dict/ecmContentType
+106;ECM_CONTENT_TYPE_CREATE;Добавление записей в справочика банков;/dict/ecmContentType
+107;ECM_CONTENT_TYPE_UPDATE;Редактирование записей в справочнике банков;/dict/ecmContentType
+108;ECM_CONTENT_TYPE_DELETE;Удаление записей из справочника банков;/dict/ecmContentType
+109;DICT_ORG_TYPE_READ;Просмотр справочника типов организаций;/dict/dictOrgType
+110;DICT_CONTACT_TYPE_READ;Просмотр справочника типов контактов;/dict/dictContactType
+111;DICT_PHONE_NUMBER_TYPE_READ;Просмотр справочника типов телефонов;/dict/dictPhoneNumberType
