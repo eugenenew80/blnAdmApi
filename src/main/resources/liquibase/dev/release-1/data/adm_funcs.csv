@@ -1,109 +1,105 @@
 ﻿id;code;name;url
-1;DICT_POWER_LINE_TYPE_READ;Просмотр справочника типов линий;dictPowerLineType
-2;DICT_POWER_LINE_TYPE_CREATE;Добавление записей в справочник типов линий;dictPowerLineType
-3;DICT_POWER_LINE_TYPE_UPDATE;Редактирование записей в справочнике типов линий;dictPowerLineType
-4;DICT_POWER_LINE_TYPE_DELETE;Удаление записей из справочника типов линий;dictPowerLineType
-5;DICT_POWER_LINE_READ;Просмотр справочника линий;dictPowerLine
-6;DICT_POWER_LINE_CREATE;Добавление записей в справочник линий;dictPowerLine
-7;DICT_POWER_LINE_UPDATE;Редактирование записей в справочнике линий;dictPowerLine
-8;DICT_POWER_LINE_DELETE;Удаление записей из справочника линий;dictPowerLine
-9;DICT_POWER_TRANSFORMER_READ;Просмотр справочника трансформаторов;dictPowerTransformer
-10;DICT_POWER_TRANSFORMER_CREATE;Добавление записей в справочник трансформаторов;dictPowerTransformer
-11;DICT_POWER_TRANSFORMER_UPDATE;Редактирование записей в справочнике трансформаторов;dictPowerTransformer
-12;DICT_POWER_TRANSFORMER_DELETE;Удаление записей из справочника трансформаторов;dictPowerTransformer
-13;DICT_REACTOR_READ;Просмотр справочника реакторов;dictReactor
-14;DICT_REACTOR_CREATE;Добавление записей в справочник реакторов;dictReactor
-15;DICT_REACTOR_UPDATE;Редактирование записей в справочнике реакторов;dictReactor
-16;DICT_REACTOR_DELETE;Удаление записей из справочника реакторов;dictReactor
-17;DICT_METER_READ;Просмотр справочника счетчиков;dictMeter
-18;DICT_METER_CREATE;Добавление записей в справочник счетчиков;dictMeter
-19;DICT_METER_UPDATE;Редактирование записей в справочнике счетчиков;dictMeter
-20;DICT_METER_DELETE;Удаление записей из справочника счетчиков;dictMeter
-21;DICT_SUBSTATION_READ;Просмотр справочника подстанций;dictSubstation
-22;DICT_SUBSTATION_CREATE;Добавление записей в справочник подстанций;dictSubstation
-23;DICT_SUBSTATION_UPDATE;Редактирование записей в справочнике подстанций;dictSubstation
-24;DICT_SUBSTATION_DELETE;Удаление записей из справочника подстанций;dictSubstation
-25;DICT_ENERGY_SOURCE_READ;Просмотр справочника электростанций;dictEnergySource
-26;DICT_ENERGY_SOURCE_CREATE;Добавление записей в справочник электростанций;dictEnergySource
-27;DICT_ENERGY_SOURCE_UPDATE;Редактирование записей в справочнике электростанций;dictEnergySource
-28;DICT_ENERGY_SOURCE_DELETE;Удаление записей из справочника электростанций;dictEnergySource
-29;DICT_METERING_POINT_READ;Просмотр справочника точек учёта;dictMeteringPoint
-30;DICT_METERING_POINT_CREATE;Добавление записей в справочник точек учёта;dictMeteringPoint
-31;DICT_METERING_POINT_UPDATE;Редактирование записей в справочнике точек учёта;dictMeteringPoint
-32;DICT_METERING_POINT_DELETE;Удаление записей из справочника точек учёта;dictMeteringPoint
-33;DICT_METER_TYPE_READ;Просмотр справочника типов счётчиков;dictMeterType
-34;DICT_METER_TYPE_CREATE;Добавление записей в справочник типов счётчиков;dictMeterType
-35;DICT_METER_TYPE_UPDATE;Редактирование записей в справочнике типов счётчиков;dictMeterType
-36;DICT_METER_TYPE_DELETE;Удаление записей из справочника типов счётчиков;dictMeterType
-37;DICT_CURRENT_TRANS_TYPE_READ;Просмотр справочника типов трансформаторов тока;dictCurrentTransType
-38;DICT_CURRENT_TRANS_TYPE_CREATE;Добавление записей в справочник типов трансформаторов тока;dictCurrentTransType
-39;DICT_CURRENT_TRANS_TYPE_UPDATE;Редактирование записей в справочнике типов трансформаторов тока;dictCurrentTransType
-40;DICT_CURRENT_TRANS_TYPE_DELETE;Удаление записей из справочника типов трансформаторов тока;dictCurrentTransType
-41;DICT_VOLTAGE_TRANS_TYPE_READ;Просмотр справочника типов трансформаторов напряжения;dictVoltageTransType
-42;DICT_VOLTAGE_TRANS_TYPE_CREATE;Добавление записей в справочник типов трансформаторов напряжения;dictVoltageTransType
-43;DICT_VOLTAGE_TRANS_TYPE_UPDATE;Редактирование записей в справочнике типов трансформаторов напряжения;dictVoltageTransType
-44;DICT_VOLTAGE_TRANS_TYPE_DELETE;Удаление записей из справочника типов трансформаторов напряжения;dictVoltageTransType
-45;DICT_SUBSTATION_TYPE_READ;Просмотр справочника типов подстанций;dictSubstationType
-46;DICT_SUBSTATION_TYPE_CREATE;Добавление записей в справочник типов подстанций;dictSubstationType
-47;DICT_SUBSTATION_TYPE_UPDATE;Редактирование записей в справочнике типов подстанций;dictSubstationType
-48;DICT_SUBSTATION_TYPE_DELETE;Удаление записей из справочника типов подстанций;dictSubstationType
-49;DICT_ENERGY_SOURCE_TYPE_READ;Просмотр справочника типов электростанций;dictEnergySourceType
-50;DICT_ENERGY_SOURCE_TYPE_CREATE;Добавление записей в справочник типов электростанций;dictEnergySourceType
-51;DICT_ENERGY_SOURCE_TYPE_UPDATE;Редактирование записей в справочнике типов электростанций;dictEnergySourceType
-52;DICT_ENERGY_SOURCE_TYPE_DELETE;Удаление записей из справочника типов электростанций;dictEnergySourceType
-53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника классов напряжения;dictVoltageClass
-54;DICT_VOLTAGE_CLASS_CREATE;Добавление записей в справочник классов напряжений;dictVoltageClass
-55;DICT_VOLTAGE_CLASS_UPDATE;Редактирование записей в справочнике классов напряжений;dictVoltageClass
-56;DICT_VOLTAGE_CLASS_DELETE;Удаление записей из справочника классов напряжений;dictVoltageClass
-57;DICT_METERING_TYPE_READ;Просмотр справочника групп учёта;dictMeteringType
-58;DICT_METERING_TYPE_CREATE;Добавление записей в справочник групп учёта;dictMeteringType
-59;DICT_METERING_TYPE_UPDATE;Редактирование записей в справочнике групп учёта;dictMeteringType
-60;DICT_METERING_TYPE_DELETE;Удаление записей из справочника групп учёта;dictMeteringType
-61;DICT_ACCOUNTING_TYPE_READ;Просмотр справочника видов учёта;dictAccountingType
-62;DICT_ACCOUNTING_TYPE_CREATE;Добавление записей в справочник видов учёта;dictAccountingType
-63;DICT_ACCOUNTING_TYPE_UPDATE;Редактирование записей в справочнике видов учёта;dictAccountingType
-64;DICT_ACCOUNTING_TYPE_DELETE;Удаление записей из справочника видов учёта;dictAccountingType
-65;DICT_UNIT_READ;Просмотр справочника единиц измерения;dictUnit
-66;DICT_UNIT_CREATE;Добавление записей в справочник единиц измерения;dictUnit
-67;DICT_UNIT_UPDATE;Редактирование записей в справочнике единиц измерения;dictUnit
-68;DICT_UNIT_DELETE;Удаление записей из справочника единиц измерения;dictUnit
-69;DICT_DATA_SOURCE_READ;Просмотр справочника источников данных;dictDataSource
-70;DICT_DATA_SOURCE_CREATE;Добавление записей в справочник источников данных;dictDataSource
-71;DICT_DATA_SOURCE_UPDATE;Редактирование записей в справочнике источников данных;dictDataSource
-72;DICT_DATA_SOURCE_DELETE;Удаление записей из справочника источников данных;dictDataSource
-73;DICT_ORGANIZATION_READ;Просмотр справочника организаций;dictOrganization
-74;DICT_ORGANIZATION_SOURCE_CREATE;Добавление записей в справочник организаций;dictOrganization
-75;DICT_ORGANIZATION_SOURCE_UPDATE;Редактирование записей в справочнике организаций;dictOrganization
-76;DICT_ORGANIZATION_SOURCE_DELETE;Удаление записей из справочника организаций;dictOrganization
-77;DICT_COUNTRY_READ;Просмотр справочника стран;dictCountry
-78;DICT_COUNTRY_CREATE;Добавление записей в справочник стран;dictCountry
-79;DICT_COUNTRY_UPDATE;Редактирование записей в справочнике стран;dictCountry
-80;DICT_COUNTRY_DELETE;Удаление записей из справочника стран;dictCountry
-81;DICT_REGION_READ;Просмотр справочника областей;dictRegion
-82;DICT_REGION_CREATE;Добавление записей в справочник областей;dictRegion
-83;DICT_REGION_UPDATE;Редактирование записей в справочнике областей;dictRegion
-84;DICT_REGION_DELETE;Удаление записей из справочника областей;dictRegion
-85;DICT_ENERGY_ZONE_READ;Просмотр справочника энергозон;dictEnergyZone
-86;DICT_ENERGY_ZONE_CREATE;Добавление записей в справочник энергозон;dictEnergyZone
-87;DICT_ENERGY_ZONE_UPDATE;Редактирование записей в справочнике энергозон;dictEnergyZone
-88;DICT_ENERGY_ZONE_DELETE;Удаление записей из справочника энергозон;dictEnergyZone
-89;DICT_ENERGY_NODE_READ;Просмотр справочника энергоузлов;dictEnergyNode
-90;DICT_ENERGY_NODE_CREATE;Добавление записей в справочник энергоузлов;dictEnergyNode
-91;DICT_ENERGY_NODE_UPDATE;Редактирование записей в справочнике энергоузлов;dictEnergyNode
-92;DICT_ENERGY_NODE_DELETE;Удаление записей из справочника энергоузлов;dictEnergyNode
-93;DICT_ENERGY_DISTRICT_READ;Просмотр справочника энергорайонов;dictEnergyDistrict
-94;DICT_ENERGY_DISTRICT_CREATE;Добавление записей в справочник энергорайонов;dictEnergyDistrict
-95;DICT_ENERGY_DISTRICT_UPDATE;Редактирование записей в справочнике энергорайонов;dictEnergyDistrict
-96;DICT_ENERGY_DISTRICT_DELETE;Удаление записей из справочника энергорайонов;dictEnergyDistrict
-97;DICT_BUSINESS_PARTNER_READ;Просмотр справочника бизнес-партнеров;dictBusinessPartner
-98;DICT_BUSINESS_PARTNER_CREATE;Добавление записей в справочник бизнес-партнеров;dictBusinessPartner
-99;DICT_BUSINESS_PARTNER_UPDATE;Редактирование записей в справочнике бизнес-партнеров;dictBusinessPartner
-100;DICT_BUSINESS_PARTNER_DELETE;Удаление записей из справочника бизнес-партнеров;dictBusinessPartner
-101;DICT_BANK_READ;Просмотр справочника банков;dictBank
-102;DICT_BANK_CREATE;Добавление записей в справочник банков;dictBank
-103;DICT_BANK_UPDATE;Редактирование записей в справочнике банков;dictBank
-104;DICT_BANK_DELETE;Удаление записей из справочника банков;dictBank
-105;DICT_BUSINESS_PARTNER_CONTENT_READ;Просмотр списка файлов бизнес-партнеров;dictBusinessPartnerContent
-106;DICT_BUSINESS_PARTNER_CONTENT_CREATE;Добавление записей в список файлов бизнес-партнеров;dictBusinessPartnerContent
-107;DICT_BUSINESS_PARTNER_CONTENT_UPDATE;Редактирование записей в списке файлов бизнес-партнеров;dictBusinessPartnerContent
-108;DICT_BUSINESS_PARTNER_CONTENT_DELETE;Удаление записей из списка файлов бизнес-партнеров;dictBusinessPartnerContent
+1;DICT_POWER_LINE_TYPE_READ;Просмотр справочника типов линий;/dict/dictPowerLineType
+2;DICT_POWER_LINE_TYPE_CREATE;Добавление записей в справочник типов линий;/dict/dictPowerLineType
+3;DICT_POWER_LINE_TYPE_UPDATE;Редактирование записей в справочнике типов линий;/dict/dictPowerLineType
+4;DICT_POWER_LINE_TYPE_DELETE;Удаление записей из справочника типов линий;/dict/dictPowerLineType
+5;DICT_POWER_LINE_READ;Просмотр справочника линий;/dict/dictPowerLine
+6;DICT_POWER_LINE_CREATE;Добавление записей в справочник линий;/dict/dictPowerLine
+7;DICT_POWER_LINE_UPDATE;Редактирование записей в справочнике линий;/dict/dictPowerLine
+8;DICT_POWER_LINE_DELETE;Удаление записей из справочника линий;/dict/dictPowerLine
+9;DICT_POWER_TRANSFORMER_READ;Просмотр справочника трансформаторов;/dict/dictPowerTransformer
+10;DICT_POWER_TRANSFORMER_CREATE;Добавление записей в справочник трансформаторов;/dict/dictPowerTransformer
+11;DICT_POWER_TRANSFORMER_UPDATE;Редактирование записей в справочнике трансформаторов;/dict/dictPowerTransformer
+12;DICT_POWER_TRANSFORMER_DELETE;Удаление записей из справочника трансформаторов;/dict/dictPowerTransformer
+13;DICT_REACTOR_READ;Просмотр справочника реакторов;/dict/dictReactor
+14;DICT_REACTOR_CREATE;Добавление записей в справочник реакторов;/dict/dictReactor
+15;DICT_REACTOR_UPDATE;Редактирование записей в справочнике реакторов;/dict/dictReactor
+16;DICT_REACTOR_DELETE;Удаление записей из справочника реакторов;/dict/dictReactor
+17;DICT_METER_READ;Просмотр справочника счетчиков;/dict/dictMeter
+18;DICT_METER_CREATE;Добавление записей в справочник счетчиков;/dict/dictMeter
+19;DICT_METER_UPDATE;Редактирование записей в справочнике счетчиков;/dict/dictMeter
+20;DICT_METER_DELETE;Удаление записей из справочника счетчиков;/dict/dictMeter
+21;DICT_SUBSTATION_READ;Просмотр справочника подстанций;/dict/dictSubstation
+22;DICT_SUBSTATION_CREATE;Добавление записей в справочник подстанций;/dict/dictSubstation
+23;DICT_SUBSTATION_UPDATE;Редактирование записей в справочнике подстанций;/dict/dictSubstation
+24;DICT_SUBSTATION_DELETE;Удаление записей из справочника подстанций;/dict/dictSubstation
+25;DICT_ENERGY_SOURCE_READ;Просмотр справочника электростанций;/dict/dictEnergySource
+26;DICT_ENERGY_SOURCE_CREATE;Добавление записей в справочник электростанций;/dict/dictEnergySource
+27;DICT_ENERGY_SOURCE_UPDATE;Редактирование записей в справочнике электростанций;/dict/dictEnergySource
+28;DICT_ENERGY_SOURCE_DELETE;Удаление записей из справочника электростанций;/dict/dictEnergySource
+29;DICT_METERING_POINT_READ;Просмотр справочника точек учёта;/dict/dictMeteringPoint
+30;DICT_METERING_POINT_CREATE;Добавление записей в справочник точек учёта;/dict/dictMeteringPoint
+31;DICT_METERING_POINT_UPDATE;Редактирование записей в справочнике точек учёта;/dict/dictMeteringPoint
+32;DICT_METERING_POINT_DELETE;Удаление записей из справочника точек учёта;/dict/dictMeteringPoint
+33;DICT_METER_TYPE_READ;Просмотр справочника типов счётчиков;/dict/dictMeterType
+34;DICT_METER_TYPE_CREATE;Добавление записей в справочник типов счётчиков;/dict/dictMeterType
+35;DICT_METER_TYPE_UPDATE;Редактирование записей в справочнике типов счётчиков;/dict/dictMeterType
+36;DICT_METER_TYPE_DELETE;Удаление записей из справочника типов счётчиков;/dict/dictMeterType
+37;DICT_CURRENT_TRANS_TYPE_READ;Просмотр справочника типов трансформаторов тока;/dict/dictCurrentTransType
+38;DICT_CURRENT_TRANS_TYPE_CREATE;Добавление записей в справочник типов трансформаторов тока;/dict/dictCurrentTransType
+39;DICT_CURRENT_TRANS_TYPE_UPDATE;Редактирование записей в справочнике типов трансформаторов тока;/dict/dictCurrentTransType
+40;DICT_CURRENT_TRANS_TYPE_DELETE;Удаление записей из справочника типов трансформаторов тока;/dict/dictCurrentTransType
+41;DICT_VOLTAGE_TRANS_TYPE_READ;Просмотр справочника типов трансформаторов напряжения;/dict/dictVoltageTransType
+42;DICT_VOLTAGE_TRANS_TYPE_CREATE;Добавление записей в справочник типов трансформаторов напряжения;/dict/dictVoltageTransType
+43;DICT_VOLTAGE_TRANS_TYPE_UPDATE;Редактирование записей в справочнике типов трансформаторов напряжения;/dict/dictVoltageTransType
+44;DICT_VOLTAGE_TRANS_TYPE_DELETE;Удаление записей из справочника типов трансформаторов напряжения;/dict/dictVoltageTransType
+45;DICT_SUBSTATION_TYPE_READ;Просмотр справочника типов подстанций;/dict/dictSubstationType
+46;DICT_SUBSTATION_TYPE_CREATE;Добавление записей в справочник типов подстанций;/dict/dictSubstationType
+47;DICT_SUBSTATION_TYPE_UPDATE;Редактирование записей в справочнике типов подстанций;/dict/dictSubstationType
+48;DICT_SUBSTATION_TYPE_DELETE;Удаление записей из справочника типов подстанций;/dict/dictSubstationType
+49;DICT_ENERGY_SOURCE_TYPE_READ;Просмотр справочника типов электростанций;/dict/dictEnergySourceType
+50;DICT_ENERGY_SOURCE_TYPE_CREATE;Добавление записей в справочник типов электростанций;/dict/dictEnergySourceType
+51;DICT_ENERGY_SOURCE_TYPE_UPDATE;Редактирование записей в справочнике типов электростанций;/dict/dictEnergySourceType
+52;DICT_ENERGY_SOURCE_TYPE_DELETE;Удаление записей из справочника типов электростанций;/dict/dictEnergySourceType
+53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника классов напряжений;/dict/dictVoltageClass
+54;DICT_VOLTAGE_CLASS_CREATE;Добавление записей в справочник классов напряжений;/dict/dictVoltageClass
+55;DICT_VOLTAGE_CLASS_UPDATE;Редактирование записей в справочнике классов напряжений;/dict/dictVoltageClass
+56;DICT_VOLTAGE_CLASS_DELETE;Удаление записей из справочника классов напряжений;/dict/dictVoltageClass
+57;DICT_METERING_TYPE_READ;Просмотр справочника групп учёта;/dict/dictMeteringType
+58;DICT_METERING_TYPE_CREATE;Добавление записей в справочник групп учёта;/dict/dictMeteringType
+59;DICT_METERING_TYPE_UPDATE;Редактирование записей в справочнике групп учёта;/dict/dictMeteringType
+60;DICT_METERING_TYPE_DELETE;Удаление записей из справочника групп учёта;/dict/dictMeteringType
+61;DICT_ACCOUNTING_TYPE_READ;Просмотр справочника видов учёта;/dict/dictAccountingType
+62;DICT_ACCOUNTING_TYPE_CREATE;Добавление записей в справочник видов учёта;/dict/dictAccountingType
+63;DICT_ACCOUNTING_TYPE_UPDATE;Редактирование записей в справочнике видов учёта;/dict/dictAccountingType
+64;DICT_ACCOUNTING_TYPE_DELETE;Удаление записей из справочника видов учёта;/dict/dictAccountingType
+65;DICT_UNIT_READ;Просмотр справочника единиц измерения;/dict/dictUnit
+66;DICT_UNIT_CREATE;Добавление записей в справочник единиц измерения;/dict/dictUnit
+67;DICT_UNIT_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictUnit
+68;DICT_UNIT_DELETE;Удаление записей из справочника единиц измерения;/dict/dictUnit
+69;DICT_DATA_SOURCE_READ;Просмотр справочника источников данных;/dict/dictDataSource
+70;DICT_DATA_SOURCE_CREATE;Добавление записей в справочник источников данных;/dict/dictDataSource
+71;DICT_DATA_SOURCE_UPDATE;Редактирование записей в справочнике источников данных;/dict/dictDataSource
+72;DICT_DATA_SOURCE_DELETE;Удаление записей из справочника источников данных;/dict/dictDataSource
+73;DICT_ORGANIZATION_READ;Просмотр справочника организаций;/dict/dictOrganization
+74;DICT_ORGANIZATION_SOURCE_CREATE;Добавление записей в справочник организаций;/dict/dictOrganization
+75;DICT_ORGANIZATION_SOURCE_UPDATE;Редактирование записей в справочнике организаций;/dict/dictOrganization
+76;DICT_ORGANIZATION_SOURCE_DELETE;Удаление записей из справочника организаций;/dict/dictOrganization
+77;DICT_COUNTRY_READ;Просмотр справочника стран;/dict/dictCountry
+78;DICT_COUNTRY_CREATE;Добавление записей в справочник стран;/dict/dictCountry
+79;DICT_COUNTRY_UPDATE;Редактирование записей в справочнике стран;/dict/dictCountry
+80;DICT_COUNTRY_DELETE;Удаление записей из справочника стран;/dict/dictCountry
+81;DICT_REGION_READ;Просмотр справочника областей;/dict/dictRegion
+82;DICT_REGION_CREATE;Добавление записей в справочник областей;/dict/dictRegion
+83;DICT_REGION_UPDATE;Редактирование записей в справочнике областей;/dict/dictRegion
+84;DICT_REGION_DELETE;Удаление записей из справочника областей;/dict/dictRegion
+85;DICT_ENERGY_ZONE_READ;Просмотр справочника энергозон;/dict/dictEnergyZone
+86;DICT_ENERGY_ZONE_CREATE;Добавление записей в справочник энергозон;/dict/dictEnergyZone
+87;DICT_ENERGY_ZONE_UPDATE;Редактирование записей в справочнике энергозон;/dict/dictEnergyZone
+88;DICT_ENERGY_ZONE_DELETE;Удаление записей из справочника энергозон;/dict/dictEnergyZone
+89;DICT_ENERGY_NODE_READ;Просмотр справочника энергоузлов;/dict/dictEnergyNode
+90;DICT_ENERGY_NODE_CREATE;Добавление записей в справочник энергоузлов;/dict/dictEnergyNode
+91;DICT_ENERGY_NODE_UPDATE;Редактирование записей в справочнике энергоузлов;/dict/dictEnergyNode
+92;DICT_ENERGY_NODE_DELETE;Удаление записей из справочника энергоузлов;/dict/dictEnergyNode
+93;DICT_ENERGY_DISTRICT_READ;Просмотр справочника энергорайонов;/dict/dictEnergyDistrict
+94;DICT_ENERGY_DISTRICT_CREATE;Добавление записей в справочник энергорайонов;/dict/dictEnergyDistrict
+95;DICT_ENERGY_DISTRICT_UPDATE;Редактирование записей в справочнике энергорайонов;/dict/dictEnergyDistrict
+96;DICT_ENERGY_DISTRICT_DELETE;Удаление записей из справочника энергорайонов;/dict/dictEnergyDistrict
+97;DICT_BUSINESS_PARTNER_READ;Просмотр справочника бизнес-партнеров;/dict/dictBusinessPartner
+98;DICT_BUSINESS_PARTNER_CREATE;Добавление записей в справочник бизнес-партнеров;/dict/dictBusinessPartner
+99;DICT_BUSINESS_PARTNER_UPDATE;Редактирование записей в справочнике бизнес-партнеров;/dict/dictBusinessPartner
+100;DICT_BUSINESS_PARTNER_DELETE;Удаление записей из справочника бизнес-партнеров;/dict/dictBusinessPartner
+101;DICT_BANK_READ;Просмотр справочника единиц измерения;/dict/dictBank
+102;DICT_BANK_CREATE;Добавление записей в справочник единиц измерения;/dict/dictBank
+103;DICT_BANK_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictBank
+104;DICT_BANK_DELETE;Удаление записей из справочника единиц измерения;/dict/dictBank
