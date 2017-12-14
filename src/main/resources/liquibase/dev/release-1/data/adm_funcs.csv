@@ -51,7 +51,7 @@
 50;DICT_ENERGY_SOURCE_TYPE_CREATE;Добавление записей в справочник типов электростанций;/dict/dictEnergySourceType
 51;DICT_ENERGY_SOURCE_TYPE_UPDATE;Редактирование записей в справочнике типов электростанций;/dict/dictEnergySourceType
 52;DICT_ENERGY_SOURCE_TYPE_DELETE;Удаление записей из справочника типов электростанций;/dict/dictEnergySourceType
-53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника единиц измерения;/dict/dictVoltageClass
+53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника классов напряжения;/dict/dictVoltageClass
 54;DICT_VOLTAGE_CLASS_CREATE;Добавление записей в справочник классов напряжений;/dict/dictVoltageClass
 55;DICT_VOLTAGE_CLASS_UPDATE;Редактирование записей в справочнике классов напряжений;/dict/dictVoltageClass
 56;DICT_VOLTAGE_CLASS_DELETE;Удаление записей из справочника классов напряжений;/dict/dictVoltageClass
