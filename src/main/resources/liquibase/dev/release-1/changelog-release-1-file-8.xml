@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+	<changeSet id="adm-eug-25" logicalFilePath="path-independent" author="eugene" context="dev">
+		<comment>Adding business functions</comment>
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="105"/>
+			<column name="code" type="varchar(100)" value="DICT_ORG_TYPE_READ"/>
+			<column name="name" type="varchar(100)" value="Просмотр справочника типов организаций"/>
+			<column name="url" type="varchar(300)" value="/dict/dictOrgType"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="106"/>
+			<column name="code" type="varchar(100)" value="DICT_CONTACT_TYPE_READ"/>
+			<column name="name" type="varchar(100)" value="Просмотр справочника типов контактов"/>
+			<column name="url" type="varchar(300)" value="/dict/dictContactType"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="107"/>
+			<column name="code" type="varchar(100)" value="DICT_PHONE_NUMBER_TYPE_READ"/>
+			<column name="name" type="varchar(100)" value="Просмотр справочника типов телефонов"/>
+			<column name="url" type="varchar(300)" value="/dict/dictPhoneNumberType"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="108"/>
+			<column name="code" type="varchar(100)" value="ECM_CONTENT_TYPE_READ"/>
+			<column name="name" type="varchar(100)" value="Просмотр справочника типов контента"/>
+			<column name="url" type="varchar(300)" value="/dict/ecmContentType"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="109"/>
+			<column name="code" type="varchar(100)" value="ECM_CONTENT_TYPE_UPDATE"/>
+			<column name="name" type="varchar(100)" value="Редактирование справочникатипов контента"/>
+			<column name="url" type="varchar(300)" value="/dict/ecmContentType"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="110"/>
+			<column name="code" type="varchar(100)" value="ECM_CONTENT_TYPE_CREATE"/>
+			<column name="name" type="varchar(100)" value="Создание записей в справочнике типов контента"/>
+			<column name="url" type="varchar(300)" value="/dict/ecmContentType"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_funcs">
+			<column name="id" type="number" value="111"/>
+			<column name="code" type="varchar(100)" value="ECM_CONTENT_TYPE_DELETE"/>
+			<column name="name" type="varchar(100)" value="Удаление записей из справочника типов контента"/>
+			<column name="url" type="varchar(300)" value="/dict/ecmContentType"/>
+		</insert>
+
+		<rollback>
+			<delete schemaName="apps" tableName="adm_funcs">
+				<where>id between 105 and 111</where>
+			</delete>
+		</rollback>
+	</changeSet>
+
+	<changeSet id="adm-eug-26" logicalFilePath="path-independent" author="eugene" context="dev">
+		<comment>Adding business functions to admin</comment>
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="105"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="106"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="107"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="108"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="109"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="110"/>
+		</insert>
+
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="1"/>
+			<column name="func_id" type="number" value="111"/>
+		</insert>
+
+
+		<rollback>
+			<delete schemaName="apps" tableName="adm_role_funcs">
+				<where>func_id between 105 and 111</where>
+			</delete>
+		</rollback>
+	</changeSet>
+</databaseChangeLog>

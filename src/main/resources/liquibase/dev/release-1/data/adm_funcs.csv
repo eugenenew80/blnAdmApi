@@ -51,7 +51,7 @@
 50;DICT_ENERGY_SOURCE_TYPE_CREATE;Добавление записей в справочник типов электростанций;/dict/dictEnergySourceType
 51;DICT_ENERGY_SOURCE_TYPE_UPDATE;Редактирование записей в справочнике типов электростанций;/dict/dictEnergySourceType
 52;DICT_ENERGY_SOURCE_TYPE_DELETE;Удаление записей из справочника типов электростанций;/dict/dictEnergySourceType
-53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника единиц измерения;/dict/dictVoltageClass
+53;DICT_VOLTAGE_CLASS_READ;Просмотр справочника классов напряжений;/dict/dictVoltageClass
 54;DICT_VOLTAGE_CLASS_CREATE;Добавление записей в справочник классов напряжений;/dict/dictVoltageClass
 55;DICT_VOLTAGE_CLASS_UPDATE;Редактирование записей в справочнике классов напряжений;/dict/dictVoltageClass
 56;DICT_VOLTAGE_CLASS_DELETE;Удаление записей из справочника классов напряжений;/dict/dictVoltageClass
@@ -99,7 +99,7 @@
 98;DICT_BUSINESS_PARTNER_CREATE;Добавление записей в справочник бизнес-партнеров;/dict/dictBusinessPartner
 99;DICT_BUSINESS_PARTNER_UPDATE;Редактирование записей в справочнике бизнес-партнеров;/dict/dictBusinessPartner
 100;DICT_BUSINESS_PARTNER_DELETE;Удаление записей из справочника бизнес-партнеров;/dict/dictBusinessPartner
-101;DICT_BANK_READ;Просмотр справочника банков;/dict/dictBank
-102;DICT_BANK_CREATE;Добавление записей в справочник банков;/dict/dictBank
-103;DICT_BANK_UPDATE;Редактирование записей в справочнике банков;/dict/dictBank
-104;DICT_BANK_DELETE;Удаление записей из справочника банков;/dict/dictBank
+101;DICT_BANK_READ;Просмотр справочника единиц измерения;/dict/dictBank
+102;DICT_BANK_CREATE;Добавление записей в справочник единиц измерения;/dict/dictBank
+103;DICT_BANK_UPDATE;Редактирование записей в справочнике единиц измерения;/dict/dictBank
+104;DICT_BANK_DELETE;Удаление записей из справочника единиц измерения;/dict/dictBank
