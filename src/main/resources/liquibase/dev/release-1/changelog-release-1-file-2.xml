@@ -65,7 +65,7 @@
 	            incrementBy="1"
 	            schemaName="apps"
 	            sequenceName="adm_funcs_s"
-	            startValue="5"/>
+	            startValue="112"/>
 	</changeSet>	
 	
 </databaseChangeLog>

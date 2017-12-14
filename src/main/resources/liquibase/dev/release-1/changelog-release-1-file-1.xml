@@ -60,6 +60,6 @@
 	            incrementBy="1"
 	            schemaName="apps"
 	            sequenceName="adm_roles_s"
-	            startValue="2"/>
+	            startValue="3"/>
 	</changeSet>
 </databaseChangeLog>

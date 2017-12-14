@@ -50,7 +50,6 @@
 	        
 	        <column name="user_id"		type="NUMERIC"/>
 	        <column name="role_id"		type="NUMERIC"/>
-	        <column name="start_date"	type="DATE"/>
 	    </loadData>
 		
 		<rollback>
