@@ -25,6 +25,10 @@
 			<column name="org_id" type="number">
 				<constraints nullable="false"/>
 			</column>
+
+			<column name="password" type="number">
+				<constraints nullable="false"/>
+			</column>
         </createTable>
     </changeSet>
 
@@ -51,6 +55,7 @@
 	        <column name="id" 				type="NUMERIC"/>
 	        <column name="code" 			type="STRING"/>
 	        <column name="name"				type="STRING"/>
+	        <column name="password"				type="NUMERIC"/>
 	    </loadData>
 		
 		<rollback>
@@ -64,7 +69,7 @@
 	            incrementBy="1"
 	            schemaName="apps"
 	            sequenceName="adm_users_s"
-	            startValue="36"/>
+	            startValue="19"/>
 	</changeSet>	
 	
 </databaseChangeLog>

@@ -12,6 +12,6 @@
 			<column name="role_id" type="number" value="2"/>
 			<column name="func_id" type="number" value="25"/>
 		</insert>
-		<rollback />
+		<rollback/>
 	</changeSet>
 </databaseChangeLog>
