@@ -95,6 +95,10 @@
       		<basic name="orgId">
       			<column name="org_id" />
       		</basic>
+
+			<basic name="password">
+      			<column name="org_id" />
+      		</basic>
       		
       		<one-to-many name="roles" mapped-by="user" orphan-removal="true">
 	            <cascade>

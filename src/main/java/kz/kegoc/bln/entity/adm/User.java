@@ -19,5 +19,9 @@ public class User implements HasId, HasCode, HasName {
 	@NotNull
 	private Long orgId;
 
+	@NotNull
+	private Long password;
+
+
 	private List<UserRole> roles; 
 }
