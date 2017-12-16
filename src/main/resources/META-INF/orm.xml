@@ -96,8 +96,8 @@
       			<column name="org_id" />
       		</basic>
 
-			<basic name="password">
-      			<column name="password" />
+			<basic name="pass">
+      			<column name="pass" />
       		</basic>
       		
       		<one-to-many name="roles" mapped-by="user" orphan-removal="true">

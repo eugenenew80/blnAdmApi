@@ -20,7 +20,7 @@ public class User implements HasId, HasCode, HasName {
 	private Long orgId;
 
 	@NotNull @Size(max = 30)
-	private String password;
+	private String pass;
 
 	private List<UserRole> roles; 
 }
