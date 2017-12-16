@@ -26,7 +26,7 @@
 				<constraints nullable="false"/>
 			</column>
 
-			<column name="password" type="number">
+			<column name="password" type="varchar(12)">
 				<constraints nullable="false"/>
 			</column>
         </createTable>
@@ -55,7 +55,7 @@
 	        <column name="id" 				type="NUMERIC"/>
 	        <column name="code" 			type="STRING"/>
 	        <column name="name"				type="STRING"/>
-	        <column name="password"				type="NUMERIC"/>
+	        <column name="password"				type="STRING"/>
 	    </loadData>
 		
 		<rollback>
