@@ -30,4 +30,12 @@
 		</insert>
 		<rollback/>
 	</changeSet>
+
+	<changeSet id="adm-rus-5" logicalFilePath="path-independent" author="ruslan" context="postgres">
+		<insert schemaName="apps" tableName="adm_role_funcs">
+			<column name="role_id" type="number" value="2"/>
+			<column name="func_id" type="number" value="26"/>
+		</insert>
+		<rollback/>
+	</changeSet>
 </databaseChangeLog>
