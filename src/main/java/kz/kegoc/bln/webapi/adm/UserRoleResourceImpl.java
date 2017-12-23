@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import org.dozer.DozerBeanMapper;
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import kz.kegoc.bln.entity.adm.User;
 import kz.kegoc.bln.entity.adm.UserRole;
 import kz.kegoc.bln.entity.adm.UserRoleId;
@@ -19,19 +19,13 @@ import kz.kegoc.bln.service.adm.UserService;
 @Consumes({ "application/xml", "application/json" })
 public class UserRoleResourceImpl {
 		
-	public UserRoleResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/UserRoleDtoDefaultMapping.xml"));
-	}
-
-
 	@GET
 	public Response getAll(@PathParam("userId") Long userId) {
 		User entity = service.findById(userId);
 
 		List<UserRoleDto> list = entity.getRoles()
 			.stream()
-			.map( it-> mapper.map(it, UserRoleDto.class) )
+			.map( it-> mapper.getMapper().map(it, UserRoleDto.class) )
 			.collect(Collectors.toList());		
 	
 		return Response.ok()
@@ -45,16 +39,16 @@ public class UserRoleResourceImpl {
 	public Response getById(@PathParam("userId") Long userId, @PathParam("id") Long id) {
 		UserRole entity = service.findRoleById(new UserRoleId(userId, id));
 		return Response.ok()
-			.entity(mapper.map(entity, UserRoleDto.class))
+			.entity(mapper.getMapper().map(entity, UserRoleDto.class))
 			.build();		
 	}
 	
 		
 	@POST
 	public Response create(@PathParam("userId") Long userId, UserRoleDto userRoleDto ) {
-		UserRole newEntity = service.addRole(userId, mapper.map(userRoleDto, UserRole.class));
+		UserRole newEntity = service.addRole(userId, mapper.getMapper().map(userRoleDto, UserRole.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, UserRoleDto.class))
+			.entity(mapper.getMapper().map(newEntity, UserRoleDto.class))
 			.build();
 	}
 	
@@ -62,9 +56,9 @@ public class UserRoleResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("userId") Long userId, @PathParam("id") Long id, UserRoleDto userRoleDto ) {
-		UserRole newEntity = service.updateRole(userId, mapper.map(userRoleDto, UserRole.class));
+		UserRole newEntity = service.updateRole(userId, mapper.getMapper().map(userRoleDto, UserRole.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, UserRoleDto.class))
+			.entity(mapper.getMapper().map(newEntity, UserRoleDto.class))
 			.build();
 	}
 	
@@ -78,6 +72,9 @@ public class UserRoleResourceImpl {
 	}
 	
 		
-	@Inject private UserService service;
-	private DozerBeanMapper mapper;
+	@Inject
+	private UserService service;
+
+	@Inject
+	private BeanMapper mapper;
 }

@@ -6,6 +6,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
+
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import org.dozer.DozerBeanMapper;
 import kz.kegoc.bln.entity.adm.Role;
 import kz.kegoc.bln.entity.adm.RoleDict;
@@ -18,12 +20,6 @@ import kz.kegoc.bln.service.adm.RoleService;
 @Produces({ "application/xml", "application/json" })
 @Consumes({ "application/xml", "application/json" })
 public class RoleDictResourceImpl {
-		
-	public RoleDictResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/RoleDictDtoDefaultMapping.xml"));
-	}
-
 
 	@GET
 	public Response getAll(@PathParam("roleId") Long roleId) {
@@ -31,7 +27,7 @@ public class RoleDictResourceImpl {
 
 		List<RoleDictDto> list = entity.getDicts()
 			.stream()
-			.map( it-> mapper.map(it, RoleDictDto.class) )
+			.map(it-> mapper.getMapper().map(it, RoleDictDto.class))
 			.collect(Collectors.toList());		
 	
 		return Response.ok()
@@ -45,16 +41,16 @@ public class RoleDictResourceImpl {
 	public Response getById(@PathParam("roleId") Long roleId, @PathParam("id") Long id) {
 		RoleDict entity = service.findDictById(new RoleDictId(roleId, id));
 		return Response.ok()
-			.entity(mapper.map(entity, RoleDictDto.class))
+			.entity(mapper.getMapper().map(entity, RoleDictDto.class))
 			.build();		
 	}
 	
 		
 	@POST
 	public Response create(@PathParam("roleId") Long roleId, RoleDictDto roleDictDto ) {
-		RoleDict newEntity = service.addDict(roleId, mapper.map(roleDictDto, RoleDict.class));
+		RoleDict newEntity = service.addDict(roleId, mapper.getMapper().map(roleDictDto, RoleDict.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleDictDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleDictDto.class))
 			.build();
 	}
 	
@@ -62,9 +58,9 @@ public class RoleDictResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("roleId") Long roleId, @PathParam("id") Long id, RoleDictDto roleDictDto ) {
-		RoleDict newEntity = service.updateDict(roleId, mapper.map(roleDictDto, RoleDict.class));
+		RoleDict newEntity = service.updateDict(roleId, mapper.getMapper().map(roleDictDto, RoleDict.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleDictDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleDictDto.class))
 			.build();
 	}
 	
@@ -78,6 +74,9 @@ public class RoleDictResourceImpl {
 	}
 	
 		
-	@Inject private RoleService service;
-	private DozerBeanMapper mapper;
+	@Inject
+	private RoleService service;
+
+	@Inject
+	private BeanMapper mapper;
 }

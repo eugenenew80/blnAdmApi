@@ -6,6 +6,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
+
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import org.dozer.DozerBeanMapper;
 import org.apache.commons.lang3.StringUtils;
 
@@ -20,12 +22,6 @@ import kz.kegoc.bln.service.adm.UserService;
 @Produces({ "application/xml", "application/json" })
 @Consumes({ "application/xml", "application/json" })
 public class UserResourceImpl {
-	
-	public UserResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/UserDtoDefaultMapping.xml"));
-	} 
-
 
 	@GET 
 	public Response getAll(@QueryParam("code") String code, @QueryParam("name") String name) {		
@@ -37,7 +33,7 @@ public class UserResourceImpl {
 		
 		List<UserDto> list = service.find(query)
 			.stream()
-			.map( it-> mapper.map(it, UserDto.class) )
+			.map( it-> mapper.getMapper().map(it, UserDto.class) )
 			.collect(Collectors.toList());
 		
 		return Response.ok()
@@ -51,7 +47,7 @@ public class UserResourceImpl {
 	public Response getById(@PathParam("id") Long id) {
 		User entity = service.findById(id);
 		return Response.ok()
-			.entity(mapper.map(entity, UserDto.class))
+			.entity(mapper.getMapper().map(entity, UserDto.class))
 			.build();		
 	}
 	
@@ -61,7 +57,7 @@ public class UserResourceImpl {
 	public Response getByCode(@PathParam("code") String code) {		
 		User entity = service.findByCode(code);
 		return Response.ok()
-			.entity(mapper.map(entity, UserDto.class))
+			.entity(mapper.getMapper().map(entity, UserDto.class))
 			.build();
 	}
 	
@@ -71,16 +67,16 @@ public class UserResourceImpl {
 	public Response getByName(@PathParam("name") String name) {		
 		User entity = service.findByName(name);
 		return Response.ok()
-			.entity(mapper.map(entity, UserDto.class))
+			.entity(mapper.getMapper().map(entity, UserDto.class))
 			.build();
 	}
 
 	
 	@POST
 	public Response create(UserDto accountingTypeDto) {
-		User newEntity = service.create(mapper.map(accountingTypeDto, User.class));	
+		User newEntity = service.create(mapper.getMapper().map(accountingTypeDto, User.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, UserDto.class))
+			.entity(mapper.getMapper().map(newEntity, UserDto.class))
 			.build();
 	}
 	
@@ -88,9 +84,9 @@ public class UserResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("id") Long id, UserDto accountingTypeDto ) {
-		User newEntity = service.update(mapper.map(accountingTypeDto, User.class)); 
+		User newEntity = service.update(mapper.getMapper().map(accountingTypeDto, User.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, UserDto.class))
+			.entity(mapper.getMapper().map(newEntity, UserDto.class))
 			.build();
 	}
 	
@@ -110,7 +106,12 @@ public class UserResourceImpl {
 	}
 	
 	
-	@Inject private UserService service;
-	@Inject private UserRoleResourceImpl userRoleResource;
-	private DozerBeanMapper mapper;
+	@Inject
+	private UserService service;
+
+	@Inject
+	private UserRoleResourceImpl userRoleResource;
+
+	@Inject
+	private BeanMapper mapper;
 }

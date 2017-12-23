@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import org.dozer.DozerBeanMapper;
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import kz.kegoc.bln.entity.adm.Role;
 import kz.kegoc.bln.entity.adm.RoleFunc;
 import kz.kegoc.bln.entity.adm.RoleFuncId;
@@ -19,19 +19,13 @@ import kz.kegoc.bln.service.adm.RoleService;
 @Consumes({ "application/xml", "application/json" })
 public class RoleFuncResourceImpl {
 		
-	public RoleFuncResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/RoleFuncDtoDefaultMapping.xml"));
-	}
-
-
 	@GET
 	public Response getAll(@PathParam("roleId") Long roleId) {
 		Role entity = service.findById(roleId);
 
 		List<RoleFuncDto> list = entity.getFuncs()
 			.stream()
-			.map( it-> mapper.map(it, RoleFuncDto.class) )
+			.map(it-> mapper.getMapper().map(it, RoleFuncDto.class))
 			.collect(Collectors.toList());		
 	
 		return Response.ok()
@@ -45,16 +39,16 @@ public class RoleFuncResourceImpl {
 	public Response getById(@PathParam("roleId") Long roleId, @PathParam("id") Long id) {
 		RoleFunc entity = service.findFuncById(new RoleFuncId(roleId, id));
 		return Response.ok()
-			.entity(mapper.map(entity, RoleFuncDto.class))
+			.entity(mapper.getMapper().map(entity, RoleFuncDto.class))
 			.build();		
 	}
 	
 		
 	@POST
 	public Response create(@PathParam("roleId") Long roleId, RoleFuncDto roleFuncDto ) {
-		RoleFunc newEntity = service.addFunc(roleId, mapper.map(roleFuncDto, RoleFunc.class));
+		RoleFunc newEntity = service.addFunc(roleId, mapper.getMapper().map(roleFuncDto, RoleFunc.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleFuncDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleFuncDto.class))
 			.build();
 	}
 	
@@ -62,9 +56,9 @@ public class RoleFuncResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("roleId") Long roleId, @PathParam("id") Long id, RoleFuncDto roleFuncDto ) {
-		RoleFunc newEntity = service.updateFunc(roleId, mapper.map(roleFuncDto, RoleFunc.class));
+		RoleFunc newEntity = service.updateFunc(roleId, mapper.getMapper().map(roleFuncDto, RoleFunc.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleFuncDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleFuncDto.class))
 			.build();
 	}
 	
@@ -78,6 +72,9 @@ public class RoleFuncResourceImpl {
 	}
 	
 		
-	@Inject private RoleService service;
-	private DozerBeanMapper mapper;
+	@Inject
+	private RoleService service;
+
+	@Inject
+	private BeanMapper mapper;
 }

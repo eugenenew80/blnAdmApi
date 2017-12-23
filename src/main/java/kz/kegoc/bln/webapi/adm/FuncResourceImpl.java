@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import org.dozer.DozerBeanMapper;
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import org.apache.commons.lang3.StringUtils;
 import kz.kegoc.bln.entity.adm.Func;
 import kz.kegoc.bln.entity.adm.dto.FuncDto;
@@ -19,12 +19,6 @@ import kz.kegoc.bln.service.adm.FuncService;
 @Produces({ "application/xml", "application/json" })
 @Consumes({ "application/xml", "application/json" })
 public class FuncResourceImpl {
-	
-	public FuncResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/FuncDtoDefaultMapping.xml"));
-	} 
-
 
 	@GET 
 	public Response getAll(@QueryParam("code") String code, @QueryParam("name") String name) {		
@@ -36,7 +30,7 @@ public class FuncResourceImpl {
 		
 		List<FuncDto> list = service.find(query)
 			.stream()
-			.map( it-> mapper.map(it, FuncDto.class) )
+			.map( it-> mapper.getMapper().map(it, FuncDto.class) )
 			.collect(Collectors.toList());
 		
 		return Response.ok()
@@ -50,7 +44,7 @@ public class FuncResourceImpl {
 	public Response getById(@PathParam("id") Long id) {
 		Func entity = service.findById(id);
 		return Response.ok()
-			.entity(mapper.map(entity, FuncDto.class))
+			.entity(mapper.getMapper().map(entity, FuncDto.class))
 			.build();		
 	}
 	
@@ -60,7 +54,7 @@ public class FuncResourceImpl {
 	public Response getByCode(@PathParam("code") String code) {		
 		Func entity = service.findByCode(code);
 		return Response.ok()
-			.entity(mapper.map(entity, FuncDto.class))
+			.entity(mapper.getMapper().map(entity, FuncDto.class))
 			.build();
 	}
 	
@@ -70,16 +64,16 @@ public class FuncResourceImpl {
 	public Response getByName(@PathParam("name") String name) {		
 		Func entity = service.findByName(name);
 		return Response.ok()
-			.entity(mapper.map(entity, FuncDto.class))
+			.entity(mapper.getMapper().map(entity, FuncDto.class))
 			.build();
 	}
 
 	
 	@POST
 	public Response create(FuncDto accountingTypeDto) {
-		Func newEntity = service.create(mapper.map(accountingTypeDto, Func.class));	
+		Func newEntity = service.create(mapper.getMapper().map(accountingTypeDto, Func.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, FuncDto.class))
+			.entity(mapper.getMapper().map(newEntity, FuncDto.class))
 			.build();
 	}
 	
@@ -87,9 +81,9 @@ public class FuncResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("id") Long id, FuncDto accountingTypeDto ) {
-		Func newEntity = service.update(mapper.map(accountingTypeDto, Func.class)); 
+		Func newEntity = service.update(mapper.getMapper().map(accountingTypeDto, Func.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, FuncDto.class))
+			.entity(mapper.getMapper().map(newEntity, FuncDto.class))
 			.build();
 	}
 	
@@ -103,6 +97,10 @@ public class FuncResourceImpl {
 	}
 	
 
-	@Inject private FuncService service;
-	private DozerBeanMapper mapper;
+	@Inject
+	private FuncService service;
+
+	@Inject
+	private BeanMapper mapper;
+
 }

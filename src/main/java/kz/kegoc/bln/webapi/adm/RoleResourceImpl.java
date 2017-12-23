@@ -6,9 +6,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import org.dozer.DozerBeanMapper;
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import org.apache.commons.lang3.StringUtils;
-
 import kz.kegoc.bln.entity.adm.Role;
 import kz.kegoc.bln.entity.adm.dto.RoleDto;
 import kz.kegoc.bln.repository.common.query.*;
@@ -20,12 +19,6 @@ import kz.kegoc.bln.service.adm.RoleService;
 @Produces({ "application/xml", "application/json" })
 @Consumes({ "application/xml", "application/json" })
 public class RoleResourceImpl {
-	
-	public RoleResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/RoleDtoDefaultMapping.xml"));
-	} 
-
 
 	@GET 
 	public Response getAll(@QueryParam("code") String code, @QueryParam("name") String name) {		
@@ -37,7 +30,7 @@ public class RoleResourceImpl {
 		
 		List<RoleDto> list = service.find(query)
 			.stream()
-			.map( it-> mapper.map(it, RoleDto.class) )
+			.map( it-> mapper.getMapper().map(it, RoleDto.class) )
 			.collect(Collectors.toList());
 		
 		return Response.ok()
@@ -51,7 +44,7 @@ public class RoleResourceImpl {
 	public Response getById(@PathParam("id") Long id) {
 		Role entity = service.findById(id);
 		return Response.ok()
-			.entity(mapper.map(entity, RoleDto.class))
+			.entity(mapper.getMapper().map(entity, RoleDto.class))
 			.build();		
 	}
 	
@@ -61,7 +54,7 @@ public class RoleResourceImpl {
 	public Response getByCode(@PathParam("code") String code) {		
 		Role entity = service.findByCode(code);
 		return Response.ok()
-			.entity(mapper.map(entity, RoleDto.class))
+			.entity(mapper.getMapper().map(entity, RoleDto.class))
 			.build();
 	}
 	
@@ -71,16 +64,16 @@ public class RoleResourceImpl {
 	public Response getByName(@PathParam("name") String name) {		
 		Role entity = service.findByName(name);
 		return Response.ok()
-			.entity(mapper.map(entity, RoleDto.class))
+			.entity(mapper.getMapper().map(entity, RoleDto.class))
 			.build();
 	}
 
 	
 	@POST
 	public Response create(RoleDto accountingTypeDto) {
-		Role newEntity = service.create(mapper.map(accountingTypeDto, Role.class));	
+		Role newEntity = service.create(mapper.getMapper().map(accountingTypeDto, Role.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleDto.class))
 			.build();
 	}
 	
@@ -88,9 +81,9 @@ public class RoleResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("id") Long id, RoleDto accountingTypeDto ) {
-		Role newEntity = service.update(mapper.map(accountingTypeDto, Role.class)); 
+		Role newEntity = service.update(mapper.getMapper().map(accountingTypeDto, Role.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleDto.class))
 			.build();
 	}
 	
@@ -122,9 +115,18 @@ public class RoleResourceImpl {
 	}	
 	
 	
-	@Inject private RoleService service;
-	@Inject private RoleModuleResourceImpl roleModuleResource;
-	@Inject private RoleFuncResourceImpl roleFuncResource;
-	@Inject private RoleDictResourceImpl roleDictResource;
-	private DozerBeanMapper mapper;
+	@Inject
+	private RoleService service;
+
+	@Inject
+	private RoleModuleResourceImpl roleModuleResource;
+
+	@Inject
+	private RoleFuncResourceImpl roleFuncResource;
+
+	@Inject
+	private RoleDictResourceImpl roleDictResource;
+
+	@Inject
+	private BeanMapper mapper;
 }

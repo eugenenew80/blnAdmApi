@@ -6,7 +6,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import org.dozer.DozerBeanMapper;
+import kz.kegoc.bln.ejb.mapper.BeanMapper;
 import kz.kegoc.bln.entity.adm.Role;
 import kz.kegoc.bln.entity.adm.RoleModule;
 import kz.kegoc.bln.entity.adm.RoleModuleId;
@@ -18,12 +18,6 @@ import kz.kegoc.bln.service.adm.RoleService;
 @Produces({ "application/xml", "application/json" })
 @Consumes({ "application/xml", "application/json" })
 public class RoleModuleResourceImpl {
-		
-	public RoleModuleResourceImpl() {
-		mapper = new DozerBeanMapper();
-		mapper.setMappingFiles(Arrays.asList("mapping/adm/RoleModuleDtoDefaultMapping.xml"));
-	}
-
 
 	@GET
 	public Response getAll(@PathParam("roleId") Long roleId) {
@@ -31,7 +25,7 @@ public class RoleModuleResourceImpl {
 
 		List<RoleModuleDto> list = entity.getModules()
 			.stream()
-			.map( it-> mapper.map(it, RoleModuleDto.class) )
+			.map( it-> mapper.getMapper().map(it, RoleModuleDto.class) )
 			.collect(Collectors.toList());		
 	
 		return Response.ok()
@@ -45,16 +39,16 @@ public class RoleModuleResourceImpl {
 	public Response getById(@PathParam("roleId") Long roleId, @PathParam("id") Long id) {
 		RoleModule entity = service.findModuleById(new RoleModuleId(roleId, id));
 		return Response.ok()
-			.entity(mapper.map(entity, RoleModuleDto.class))
+			.entity(mapper.getMapper().map(entity, RoleModuleDto.class))
 			.build();		
 	}
 	
 		
 	@POST
 	public Response create(@PathParam("roleId") Long roleId, RoleModuleDto roleModuleDto ) {
-		RoleModule newEntity = service.addModule(roleId, mapper.map(roleModuleDto, RoleModule.class));
+		RoleModule newEntity = service.addModule(roleId, mapper.getMapper().map(roleModuleDto, RoleModule.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleModuleDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleModuleDto.class))
 			.build();
 	}
 	
@@ -62,9 +56,9 @@ public class RoleModuleResourceImpl {
 	@PUT 
 	@Path("{id : \\d+}") 
 	public Response update(@PathParam("roleId") Long roleId, @PathParam("id") Long id, RoleModuleDto roleModuleDto ) {
-		RoleModule newEntity = service.updateModule(roleId, mapper.map(roleModuleDto, RoleModule.class));
+		RoleModule newEntity = service.updateModule(roleId, mapper.getMapper().map(roleModuleDto, RoleModule.class));
 		return Response.ok()
-			.entity(mapper.map(newEntity, RoleModuleDto.class))
+			.entity(mapper.getMapper().map(newEntity, RoleModuleDto.class))
 			.build();
 	}
 	
@@ -78,6 +72,9 @@ public class RoleModuleResourceImpl {
 	}
 	
 		
-	@Inject private RoleService service;
-	private DozerBeanMapper mapper;
+	@Inject
+	private RoleService service;
+
+	@Inject
+	private BeanMapper mapper;
 }
