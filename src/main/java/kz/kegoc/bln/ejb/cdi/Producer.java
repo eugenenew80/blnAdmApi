@@ -22,9 +22,9 @@ public class Producer {
     @PostConstruct
     public void Producer() {
         ObjectMapper mapper = new ObjectMapper()
-                .registerModule(new ParameterNamesModule())
-                .registerModule(new Jdk8Module())
-                .registerModule(new JavaTimeModule());
+            .registerModule(new ParameterNamesModule())
+            .registerModule(new Jdk8Module())
+            .registerModule(new JavaTimeModule());
 
         Config config = new Config();
         config.useSingleServer().setAddress("redis://127.0.0.1:6379");
